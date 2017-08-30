@@ -4,27 +4,31 @@
 	<title>Lyrics-Bot</title>
 	<link href="{{ url_for('static', filename='Semantic-UI/dist/semantic.min.css') }}" rel="stylesheet">
 	<script src="{{ url_for('static', filename='Semantic-UI/dist/semantic.min.js') }}"></script>
-
 	<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Bitter|Oswald');
 		.content{
 			width: 700px;
-			margin: 40px auto 20px auto;
+			margin: 40px auto 40px auto;
 		}
 		.text{
 			padding: 30px;
 		}
 		.ui.header{
-			font-family: 'Dosis', cursive;
+			font-family: 'Oswald', sans-serif;
 		}
 		h1, h2, h3, h4, h5 {
-			font-family: 'Dosis', cursive;
+			font-family: 'Oswald', sans-serif;
 		}
 		body{
-			font-family: 'Open Sans', sans-serif;
-			background-color: 
+			font-family: 'Bitter', sans-serif;
 		}
 
+    h3 {
+      margin: 0;
+    }
+
 		@import url(https://fonts.googleapis.com/css?family=Gabriela|Dosis:200);
+    
 
 		body {
 		  font-smoothing: antialiased;
@@ -36,7 +40,7 @@
 
 		h1 {
 		  text-transform: uppercase;
-		  letter-spacing: 3px;
+		  /* letter-spacing: 3px; */
 		  font-weight: normal;
 		  font-size: 20px;
 		}
@@ -98,7 +102,7 @@
 
 		.links p{
 		  font-smoothing: subpixel-antialiased;
-		  font-family: 'Dosis', sans-serif;
+		  font-family: 'Oswald', sans-serif;
 		  text-transform: uppercase;
 		  text-align: center;
 		  padding: 0.25em 0;
@@ -119,7 +123,7 @@
 		.links li a {
 		  transition: opacity 0.2s ease-out;
 		  font-smoothing: subpixel-antialiased;
-		  font-family: 'Dosis', sans-serif;
+		  font-family: 'Oswald', sans-serif;
 		  text-transform: uppercase;
 		  text-align: right;
 		  padding: 0.25em 0;
@@ -158,7 +162,6 @@
 		  opacity: 0;
 		}
 	</style>
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:500" rel="stylesheet">
 </head>
 <body>
 
@@ -172,7 +175,7 @@
 		<div class="ui piled segment">
 			<div class="text">
 				<h1 class="ui header">{{ track }}</h1>
-				<h3 class="ui">{{ artist }}</h3>
+				<h3 class="ui">{{ artist }} - {{ album }}</h3>
 				{{ lyrics | safe }}
 			</div>
 		</div>
