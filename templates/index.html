@@ -6,6 +6,8 @@
 	<script src="{{ url_for('static', filename='Semantic-UI/dist/semantic.min.js') }}"></script>
 	<style type="text/css">
     @import url('https://fonts.googleapis.com/css?family=Bitter|Oswald');
+    @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
 		.content{
 			width: 700px;
 			margin: 40px auto 40px auto;
@@ -15,17 +17,26 @@
 			padding: 30px;
 		}
 		.ui.header{
-			font-family: 'Oswald', sans-serif;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
 		}
+
+    h1.ui.header{
+      font-size: 3rem;
+    }
+
+    h3.ui {
+        font-size: 2rem;
+    }
+
 		h1, h2, h3, h4, h5 {
-			font-family: 'Oswald', sans-serif;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
 		}
 		body{
 			font-family: 'Bitter', sans-serif;
 		}
 
     h3 {
-      margin: 0;
+      font-size: 30px;
     }
 
     #attribution{
