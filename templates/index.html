@@ -9,6 +9,7 @@
 		.content{
 			width: 700px;
 			margin: 40px auto 40px auto;
+      padding-bottom: 40px;
 		}
 		.text{
 			padding: 30px;
@@ -25,6 +26,16 @@
 
     h3 {
       margin: 0;
+    }
+
+    #attribution{
+      color: #fff;
+      position: fixed;
+      bottom: 0px;
+      right: 20px;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 5px 5px 0 0;
+      padding: 10px 20px 10px 20px;
     }
 
 		@import url(https://fonts.googleapis.com/css?family=Gabriela|Dosis:200);
@@ -58,11 +69,11 @@
 		a {
 		  transition: color 0.2s ease-out;
 		  text-decoration: none;
-		  color: #FBB;
+		  color: #ffc1a3;
 		}
 
 		a:hover {
-		  color: #444;
+		  color: #fff;
 		}
 
 		.overlay {
@@ -172,7 +183,7 @@
 
 
 	<div class="content">
-		<div class="ui piled segment">
+		<div class="ui segment">
 			<div class="text">
 				<h1 class="ui header">{{ track }}</h1>
 				<h3 class="ui">{{ artist }} - {{ album }}</h3>
@@ -186,6 +197,9 @@
 <div style="display: none;" id="controls" class="controls">
 </div>
 
+<div id="attribution">
+  LyricsBot by <a href="http://github.com/ethylomat">ethylomat</a>
+</div>
 
 </body>
 <script type="text/javascript">
