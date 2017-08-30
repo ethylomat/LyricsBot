@@ -11,7 +11,7 @@ def hello():
     track = a[2].replace(" Track:    ", "")
     album = a[3].replace(" Album:    ", "")
     try:
-        lyrics = PyLyrics.getLyrics(artist,track)
+        lyrics = PyLyrics.getLyrics(artist,track.replace("- Remastered", ""))
         pass
     except:
         lyrics = "No lyrics found"
