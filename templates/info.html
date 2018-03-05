@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Lyrics-Bot</title>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="{{ url_for('static', filename='Semantic-UI/dist/semantic.min.css') }}" rel="stylesheet">
 	<script src="{{ url_for('static', filename='Semantic-UI/dist/semantic.min.js') }}"></script>
 	<style type="text/css">
@@ -40,7 +38,6 @@
 		}
 		body{
 			font-family: 'Bitter', sans-serif;
-      background-color: #7a8390;
 		}
 
     h3 {
@@ -63,16 +60,13 @@
 		body {
 		  font-smoothing: antialiased;
 		  font-weight: normal;
-		  background: #7a8390;
-      background-image: url({{ url_for('static', filename='img/background.png') }});
-      background-position: center; 
-      background-attachment: fixed;
+		  background: #151618;
 		  color: #000;
 		  margin: 0;
 		}
 
 		h1 {
-		  /*text-transform: uppercase;*/
+		  text-transform: uppercase;
 		  /* letter-spacing: 3px; */
 		  font-weight: normal;
 		  font-size: 20px;
@@ -195,29 +189,20 @@
 		  opacity: 0;
 		}
 	</style>
-
-  <script type="text/javascript">
-    $(document).bind('keypress', function (e) {
-    console.log(e.which);  //or alert(e.which);
-    });
-  </script>
 </head>
 <body>
 
 
 <div id="container" class="container">
-
-<!--
 	<div style="position: fixed;" id="output" class="container">
 	</div>
--->
 
 
-      <div style="position: fixed; width: 100%;">
+      <div style="position: fixed; width: 100%">
         <div style="width: 1000px; margin: 40px auto;">
           <form action="/" method="post">
-            <div  class="ui vertical labeled icon buttons" style="opacity: 0.7;">
-              <button name="command" type="submit" value="pause" class="ui button">
+            <div class="ui vertical labeled icon buttons">
+              <button  name="command" type="submit" value="pause" class="ui button">
                 <i class="pause icon"></i>
                 Pause
               </button>
@@ -229,32 +214,19 @@
                 <i class="right arrow icon"></i>
                 Next
               </button>
-              <button  name="command" type="submit" value="previous" class="ui button">
-                <i class="left arrow icon"></i>
-                Previous
-              </button>
               <button  name="command" type="submit" value="shuffle" class="ui button">
                 <i class="shuffle icon"></i>
                 Shuffle
               </button>
             </div>
           </form>
-
-          <div style="transform: rotate(270deg); position: relative;">
-            <div style="height: 1000px; padding-right: 25px;">
-              <h1 style="font-size: 120px; color: rgba(255,255,255, 0.4); text-align: right; line-height: 140px;">LyricsBot</h1>
-            </div>
-          </div>
         </div>
       </div>
 
-  
 	<div class="content">
 		<div class="ui segment">
 			<div class="text">
-				<h3 class="ui">{{ artist }} - {{ album }}</h3>  
-        <h1 class="ui header">{{ track }}</h1>
-				{{ lyrics | safe }}
+        <h1 class="ui header">{{ info }}</h1>
 			</div>
 		</div>
 	</div>
@@ -269,8 +241,6 @@
 </div>
 
 </body>
-
-<!--
 <script type="text/javascript">
 	/**
 
@@ -2196,7 +2166,9 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   }
 
 
+  //------------------------------
   // Callbacks
+  //------------------------------
 
   function onWindowResize(event) {
     resize(container.offsetWidth, container.offsetHeight);
@@ -2232,6 +2204,4 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
 
 })();
 </script>
-
--->
 </html>
